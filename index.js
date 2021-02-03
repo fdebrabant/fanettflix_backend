@@ -6,6 +6,6 @@ app.use(express.static('public'));
 
 const movieRouter = require('./routes/movie.controller');
 
-app.use('/movies', movieRouter);
+app.use('/api/movies', movieRouter);
 
 app.listen(process.env.PORT_EXPRESS);
