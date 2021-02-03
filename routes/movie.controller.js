@@ -15,6 +15,19 @@ router.get('/', function(request, response) {
     });
 });
 
+// SHOW ALL GENRES
+
+router.get('/genre', function(request, response) {
+    connection.query('SELECT * FROM genre', 
+    (err,result) => {
+        if (err) {
+            response.status(500).json(err);
+        } else {
+            response.status(200).json(result);
+        }
+    });
+});
+
 // SHOW ALL MOVIES
 
 router.get('/new', function(request, response) {
